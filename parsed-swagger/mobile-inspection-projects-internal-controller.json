@@ -1,0 +1,63 @@
+{
+  "controller": "mobile-inspection-projects-internal-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/internal/mobile/inspection/user/{userId}/project/list",
+      "method": "get",
+      "summary": "List of projects for mobile user",
+      "operationId": "projectsList",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "allProjects",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

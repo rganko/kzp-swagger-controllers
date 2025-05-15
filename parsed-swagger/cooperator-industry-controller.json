@@ -1,0 +1,195 @@
+{
+  "controller": "cooperator-industry-controller",
+  "endpointCount": 3,
+  "endpoints": [
+    {
+      "path": "/rest/cooperator/{cooperantId}/industry",
+      "method": "post",
+      "summary": "Adds new cooperant industry and work types",
+      "operationId": "create_7",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperator/{cooperantId}/industry/{cooperatorIndustryId}",
+      "method": "put",
+      "summary": "Updates cooperant industry and work types",
+      "operationId": "update_7",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "cooperatorIndustryId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Updated",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperator/{cooperantId}/industry/{cooperatorIndustryId}",
+      "method": "delete",
+      "summary": "Deletes cooperant work types under industry id",
+      "operationId": "delete_11",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "cooperatorIndustryId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Deleted",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

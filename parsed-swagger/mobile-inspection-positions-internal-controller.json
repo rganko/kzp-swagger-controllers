@@ -1,0 +1,63 @@
+{
+  "controller": "mobile-inspection-positions-internal-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/internal/mobile/inspection/user/{userId}/project/{projectId}/position/list",
+      "method": "get",
+      "summary": "List of positions in given project for mobile user",
+      "operationId": "positionsList",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

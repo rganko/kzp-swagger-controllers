@@ -1,0 +1,959 @@
+{
+  "controller": "calculation-position-controller",
+  "endpointCount": 15,
+  "endpoints": [
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position",
+      "method": "post",
+      "summary": "Adds new position to a calculation",
+      "operationId": "addPosition",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "201",
+          "description": "Created",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Calculation not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+      "method": "get",
+      "summary": "Get calculation position by position id",
+      "operationId": "getById_1",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+      "method": "delete",
+      "summary": "Remove existing calculation position",
+      "operationId": "removePosition",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/approval-summary",
+      "method": "post",
+      "summary": "Obtain calculation position approval summary",
+      "operationId": "getPositionApprovalSummary_1",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/navigation",
+      "method": "post",
+      "summary": "Get position navigation",
+      "operationId": "getNavigationById",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/subpoints",
+      "method": "get",
+      "summary": "Get calculation line subpoints that came from the same position import",
+      "operationId": "getOptionOfSubpoints",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationLineId",
+          "in": "query",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/subpoints-and-valutions-for-tubing-module",
+      "method": "get",
+      "summary": "Get all subpoints under position",
+      "operationId": "getSubpointsAndCalculationsUnderPosition",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/valuation-summary",
+      "method": "post",
+      "summary": "Obtain calculation positions approval summary",
+      "operationId": "getPositionValuationSummary_1",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/approval-summary",
+      "method": "post",
+      "summary": "Obtain project's calculation positions approval summary",
+      "operationId": "getCalculationPositionsApprovalSummary",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/bulk-delete-by-ids",
+      "method": "post",
+      "summary": "Remove existing calculation positions",
+      "operationId": "bulkRemovePositions",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/bulk/order-in-user-sequence",
+      "method": "put",
+      "summary": "Calculation position uncanceling",
+      "operationId": "bulkEditOrderInUserSequence",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/delete-all",
+      "method": "post",
+      "summary": "Remove all calculation positions",
+      "operationId": "removeAllCalculationPositions",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/new/next-order-in-user-sequence",
+      "method": "get",
+      "summary": "Get next position order in user sequence for given calculation",
+      "operationId": "getNextPositionOrderInUserSequence",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/search",
+      "method": "post",
+      "summary": "Searches for calculation positions",
+      "operationId": "search_24",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/valuation-summary",
+      "method": "post",
+      "summary": "Obtain calculation positions valuation summary",
+      "operationId": "getCalculationPositionsValuationSummary",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

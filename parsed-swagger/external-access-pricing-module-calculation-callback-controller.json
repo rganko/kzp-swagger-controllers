@@ -1,0 +1,121 @@
+{
+  "controller": "external-access-pricing-module-calculation-callback-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/external/pricing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+      "method": "put",
+      "summary": "Update token for external Pricing Module in context of calculation line",
+      "operationId": "updateCalculationLineTokenStatus",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "lineId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/external/pricing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+      "method": "post",
+      "summary": "Receives callback response from external Pricing Module",
+      "operationId": "calculationLineCallback_1",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "lineId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

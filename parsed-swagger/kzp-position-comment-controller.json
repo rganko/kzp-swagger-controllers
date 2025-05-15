@@ -1,0 +1,118 @@
+{
+  "controller": "kzp-position-comment-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/kzp/position/{positionId}/comment",
+      "method": "post",
+      "summary": "Adds new comment to kzp position",
+      "operationId": "addNewPositionComment_1",
+      "parameters": [
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "201",
+          "description": "Created",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/kzp/position/{positionId}/comment/search",
+      "method": "post",
+      "summary": "Searches for comments of kzp position",
+      "operationId": "search_38",
+      "parameters": [
+        {
+          "name": "positionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

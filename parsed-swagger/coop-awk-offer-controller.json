@@ -1,0 +1,106 @@
+{
+  "controller": "coop-awk-offer-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/cooperation/offer-request/{id}/awk/accepted-offers",
+      "method": "post",
+      "summary": "Search for accepted offers for offer request",
+      "operationId": "findAccepted",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Created",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperation/offer-request/{id}/awk/previous",
+      "method": "get",
+      "summary": "Get previous awk by offer request id",
+      "operationId": "getPreviousAwk",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

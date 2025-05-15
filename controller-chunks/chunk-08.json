@@ -1,0 +1,12 @@
+[
+  "coop-offer-request-questions-controller",
+  "coop-offer-request-receiver-controller",
+  "coop-offer-request-receiver-with-offer-controller",
+  "coop-work-screen-projects-summary-controller",
+  "cooperant-acceptance-protocol-lines-internal-controller",
+  "cooperant-acceptance-protocols-internal-controller",
+  "cooperant-agreement-acceptance-protocols-internal-controller",
+  "cooperant-agreement-annex-internal-controller",
+  "cooperant-agreement-kzp-lines-internal-controller",
+  "cooperant-agreement-offer-requests-internal-controller"
+]

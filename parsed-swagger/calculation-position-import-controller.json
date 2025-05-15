@@ -1,0 +1,89 @@
+{
+  "controller": "calculation-position-import-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/project/{projectId}/calculation/{calculationId}/position/import-batch",
+      "method": "post",
+      "summary": "Parses excel file and returns its content",
+      "operationId": "processImport",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "calculationId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "201",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/calculation/position/import/parse-excel",
+      "method": "post",
+      "summary": "Parses excel file and returns its content",
+      "operationId": "parseExcel",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "content": [
+          "multipart/form-data"
+        ]
+      },
+      "responses": [
+        {
+          "code": "201",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

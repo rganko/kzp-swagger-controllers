@@ -1,0 +1,12 @@
+[
+  "coop-invoice-controller",
+  "coop-kzp-line-controller",
+  "coop-kzp-line-search-controller",
+  "coop-kzp-position-search-controller",
+  "coop-offer-controller",
+  "coop-offer-line-item-controller",
+  "coop-offer-request-changelog-controller",
+  "coop-offer-request-comment-controller",
+  "coop-offer-request-controller",
+  "coop-offer-request-lines-controller"
+]

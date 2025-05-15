@@ -1,0 +1,309 @@
+{
+  "controller": "cooperant-person-controller",
+  "endpointCount": 5,
+  "endpoints": [
+    {
+      "path": "/rest/cooperant/{cooperantId}/person",
+      "method": "post",
+      "summary": "Adds new cooperant person",
+      "operationId": "create_17",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "201",
+          "description": "Created",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperant/{cooperantId}/person/{cooperantDataPersonId}",
+      "method": "put",
+      "summary": "Updates cooperant person",
+      "operationId": "update_16",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "cooperantDataPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Updated",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperant/{cooperantId}/person/{cooperantDataPersonId}",
+      "method": "delete",
+      "summary": "Deletes cooperant person",
+      "operationId": "delete_15",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "cooperantDataPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Deleted",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperant/{cooperantId}/person/{cooperantPersonId}/ad-account",
+      "method": "post",
+      "summary": "Adds new cooperant account in AD",
+      "operationId": "createAccountInAD",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "cooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperant/{cooperantId}/person/{cooperantPersonId}/reset-password",
+      "method": "post",
+      "summary": "Reset password in cooperant account in AD",
+      "operationId": "resetCooperantPasswordInAD",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "cooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  "additional-objects-module-controller",
+  "additional-objects-module-copy-line-callback-controller",
+  "additional-objects-module-copy-line-url-controller",
+  "additional-objects-module-kzp-callback-controller",
+  "board-resolution-changelog-controller",
+  "board-resolution-controller",
+  "budget-controller",
+  "budget-create-snapshot-controller",
+  "budget-currency-controller",
+  "budget-currency-discount-controller"
+]

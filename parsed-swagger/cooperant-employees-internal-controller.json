@@ -1,0 +1,476 @@
+{
+  "controller": "cooperant-employees-internal-controller",
+  "endpointCount": 8,
+  "endpoints": [
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees",
+      "method": "get",
+      "summary": "Get cooperant employees",
+      "operationId": "getCooperantEmployees",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees",
+      "method": "post",
+      "summary": "Create cooperant employee",
+      "operationId": "createCooperantPortalEmployee",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "201",
+          "description": "Created",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees/{employeeId}",
+      "method": "get",
+      "summary": "Get cooperant employee details",
+      "operationId": "getCooperantPortalEmployee",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "employeeId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees/{employeeId}",
+      "method": "put",
+      "summary": "Update cooperant employee details",
+      "operationId": "updateCooperantPortalEmployee",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "employeeId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees/{employeeId}/ships-for-realization",
+      "method": "put",
+      "summary": "Update cooperant employee ships for realization",
+      "operationId": "updateShipsForRealizationCooperantPortalEmployee",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "employeeId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees/basic-data/{employeeId}",
+      "method": "put",
+      "summary": "Request for update of cooperant employee's basic data",
+      "operationId": "updateBasicDataCooperantPortalEmployee",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "employeeId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees/permits-notifications/{employeeId}",
+      "method": "put",
+      "summary": "Update cooperant employee details",
+      "operationId": "updatePermitsAndNotificationCooperantPortalEmployee",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "employeeId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{loggedCooperantPersonId}/employees/portal-users",
+      "method": "get",
+      "summary": "Get cooperant portal user employees",
+      "operationId": "getCooperantPortalUserEmployees",
+      "parameters": [
+        {
+          "name": "loggedCooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

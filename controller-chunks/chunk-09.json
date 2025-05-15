@@ -1,0 +1,12 @@
+[
+  "cooperant-agreements-internal-controller",
+  "cooperant-blocking-controller",
+  "cooperant-bulk-controller",
+  "cooperant-changelog-controller",
+  "cooperant-controller",
+  "cooperant-employees-internal-controller",
+  "cooperant-industry-internal-controller",
+  "cooperant-invoice-internal-controller",
+  "cooperant-offer-internal-controller",
+  "cooperant-offer-request-participation-declaration-internal-controller"
+]

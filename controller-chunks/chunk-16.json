@@ -1,0 +1,12 @@
+[
+  "kzp-line-valuation-controller",
+  "kzp-position-changelog-controller",
+  "kzp-position-changelog-details-controller",
+  "kzp-position-comment-controller",
+  "kzp-position-controller",
+  "kzp-position-edit-controller",
+  "kzp-position-master-team-controller",
+  "kzp-position-material-cost-controller",
+  "kzp-position-sale-changelog-details-controller",
+  "kzp-position-search-controller"
+]

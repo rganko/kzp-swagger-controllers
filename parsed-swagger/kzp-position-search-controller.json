@@ -1,0 +1,49 @@
+{
+  "controller": "kzp-position-search-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/kzp/position/position-no/search",
+      "method": "post",
+      "summary": "List of positionNo",
+      "operationId": "positionNoSearch",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

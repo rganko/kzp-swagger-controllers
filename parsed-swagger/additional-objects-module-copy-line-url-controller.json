@@ -1,0 +1,50 @@
+{
+  "controller": "additional-objects-module-copy-line-url-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/copy-lines-for-additional-objects/import/{importId}",
+      "method": "get",
+      "summary": "Creates copy lines urls for Additional Objects Module in context of calculation line",
+      "operationId": "createUrls",
+      "parameters": [
+        {
+          "name": "importId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

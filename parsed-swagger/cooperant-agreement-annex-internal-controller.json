@@ -1,0 +1,68 @@
+{
+  "controller": "cooperant-agreement-annex-internal-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/annex",
+      "method": "post",
+      "summary": "Search agreement annexes",
+      "operationId": "searchCooperantAgreementAnnexes",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

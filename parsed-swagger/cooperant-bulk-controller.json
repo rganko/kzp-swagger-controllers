@@ -1,0 +1,94 @@
+{
+  "controller": "cooperant-bulk-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/cooperant/bulk/activate",
+      "method": "post",
+      "summary": "Activates cooperants",
+      "operationId": "activate",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": []
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": []
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": []
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperant/bulk/deactivate",
+      "method": "post",
+      "summary": "Deactivates cooperants",
+      "operationId": "deactivate",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": []
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": []
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": []
+        }
+      ]
+    }
+  ]
+}

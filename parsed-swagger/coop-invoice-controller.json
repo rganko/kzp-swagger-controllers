@@ -1,0 +1,98 @@
+{
+  "controller": "coop-invoice-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/coop-agreement/{agreementId}/coop-invoices/{id}",
+      "method": "get",
+      "summary": "Get coop invoice by id",
+      "operationId": "getById_4",
+      "parameters": [
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "201",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/coop-agreement/{agreementId}/coop-invoices/search",
+      "method": "post",
+      "summary": "Search for coop invoices",
+      "operationId": "search_56",
+      "parameters": [
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

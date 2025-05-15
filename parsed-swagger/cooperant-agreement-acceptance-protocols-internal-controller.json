@@ -1,0 +1,660 @@
+{
+  "controller": "cooperant-agreement-acceptance-protocols-internal-controller",
+  "endpointCount": 11,
+  "endpoints": [
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}",
+      "method": "get",
+      "summary": "Get final acceptance protocol by id",
+      "operationId": "getFinalAcceptanceProtocolById_1",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}/financial-approve",
+      "method": "put",
+      "summary": "Financial approval of final acceptance protocol",
+      "operationId": "finalProtocolFinancialApprove",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}/realization-approve",
+      "method": "put",
+      "summary": "Realization approval of final acceptance protocol",
+      "operationId": "finalProtocolRealizationApprove",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}/status/REJECTED_K",
+      "method": "put",
+      "summary": "Change status of final acceptance protocol by id to REJECTED_K",
+      "operationId": "changeFinalAcceptanceProtocolStatusToRejectedK",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{protocolId}/preview",
+      "method": "get",
+      "summary": "Previews final acceptance protocol pdf file",
+      "operationId": "previewFinalProtocol_1",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "protocolId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{id}",
+      "method": "get",
+      "summary": "Get partial acceptance protocol by id",
+      "operationId": "getPartialAcceptanceProtocolById_1",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{id}/financial-approve",
+      "method": "put",
+      "summary": "Financial approval of partial acceptance protocol",
+      "operationId": "partialProtocolFinancialApprove",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{protocolId}/preview",
+      "method": "get",
+      "summary": "Previews partial acceptance protocol pdf file",
+      "operationId": "previewPartialProtocol_1",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "protocolId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{protocolId}/status/REJECTED_K",
+      "method": "put",
+      "summary": "Change status of partial acceptance protocol by id to REJECTED_K",
+      "operationId": "partialAcceptanceProtocolRejectByCooperant",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "protocolId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/list",
+      "method": "post",
+      "summary": "List partial acceptance protocols by cooperant person and agreement",
+      "operationId": "listCooperantAcceptanceProtocolPartial",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/search",
+      "method": "post",
+      "summary": "Search acceptance protocols for agreement",
+      "operationId": "searchAgreementAcceptanceProtocols",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

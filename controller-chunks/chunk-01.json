@@ -1,0 +1,12 @@
+[
+  "acceptance-protocol-approval-user-controller",
+  "acceptance-protocol-controller",
+  "acceptance-protocol-kzp-line-controller",
+  "acceptance-protocol-kzp-line-summary-controller",
+  "acceptance-protocol-kzp-line-summary-internal-controller",
+  "acceptance-protocol-partial-controller",
+  "acceptance-protocol-status-controller",
+  "acceptance-protocol-user-approval-controller",
+  "acceptance-protocol-with-agreement-controller",
+  "additional-objects-module-calculation-callback-controller"
+]

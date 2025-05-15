@@ -1,0 +1,12 @@
+[
+  "estimated-demand-kzp-line-changelog-controller",
+  "estimated-demand-line-changelog-controller",
+  "estimated-resources-demand-calculation-line-controller",
+  "estimated-resources-demand-kzp-line-controller",
+  "external-access-pricing-module-calculation-callback-controller",
+  "external-access-pricing-module-controller",
+  "external-access-pricing-module-kzp-callback-controller",
+  "external-access-pricing-module-verification-callback-controller",
+  "external-module-line-set-detacher-controller",
+  "favourite-project-controller"
+]

@@ -1,0 +1,12 @@
+[
+  "cooperant-work-type-acceptance-controller",
+  "cooperant-work-type-blocking-controller",
+  "cooperator-accounting-details-controller",
+  "cooperator-additional-information-controller",
+  "cooperator-bank-account-controller",
+  "cooperator-contact-details-controller",
+  "cooperator-industry-controller",
+  "cooperator-register-controller",
+  "energy-factor-settlement-controller",
+  "error-messages-controller"
+]

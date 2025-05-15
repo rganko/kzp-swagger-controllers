@@ -1,0 +1,12 @@
+[
+  "calculation-position-valuation-controller",
+  "coop-agreement-annex-controller",
+  "coop-agreement-comment-controller",
+  "coop-agreement-controller",
+  "coop-agreement-cost-controller",
+  "coop-agreement-kzp-line-controller",
+  "coop-awk-controller",
+  "coop-awk-offer-controller",
+  "coop-awk-offer-receiver-controller",
+  "coop-awk-offer-unsent-receiver-controller"
+]

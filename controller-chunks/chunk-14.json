@@ -1,0 +1,12 @@
+[
+  "import-sale-cost-kzp-controller",
+  "kr-task-tracker-data-controller",
+  "kzp-changelog-controller",
+  "kzp-changelog-details-controller",
+  "kzp-controller",
+  "kzp-executor-assignment-controller",
+  "kzp-line-approval-controller",
+  "kzp-line-changelog-controller",
+  "kzp-line-changelog-details-controller",
+  "kzp-line-comment-controller"
+]

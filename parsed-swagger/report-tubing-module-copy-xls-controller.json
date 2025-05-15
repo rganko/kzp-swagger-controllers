@@ -1,0 +1,94 @@
+{
+  "controller": "report-tubing-module-copy-xls-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/report/tubing-module-copy-xls/{reportId}/download",
+      "method": "get",
+      "summary": "Download report file",
+      "operationId": "downloadReportFile",
+      "parameters": [
+        {
+          "name": "reportId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "*/*"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "*/*"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "*/*"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/report/tubing-module-copy-xls/{tubingPositionId}",
+      "method": "post",
+      "summary": "Generate report tubing module copy result",
+      "operationId": "generateReport",
+      "parameters": [
+        {
+          "name": "tubingPositionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "*/*"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "*/*"
+          ]
+        }
+      ]
+    }
+  ]
+}

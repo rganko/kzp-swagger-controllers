@@ -1,0 +1,43 @@
+{
+  "controller": "project-authorities-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/project/{projectId}/my-authorities",
+      "method": "get",
+      "summary": "Gets logged user project authorities",
+      "operationId": "getProject_1",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

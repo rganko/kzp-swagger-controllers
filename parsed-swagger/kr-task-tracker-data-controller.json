@@ -1,0 +1,68 @@
+{
+  "controller": "kr-task-tracker-data-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/project/kr-task-tracker-data",
+      "method": "post",
+      "summary": "Start KrTaskTrackerDataJob to refresh data",
+      "operationId": "startRefreshing",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/project/kr-task-tracker-data/newest",
+      "method": "get",
+      "summary": "Get newest KrTaskTrackerData",
+      "operationId": "getNewestKrTaskTrackerData",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

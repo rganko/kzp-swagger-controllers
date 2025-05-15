@@ -1,0 +1,50 @@
+{
+  "controller": "import-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/import/{importId}",
+      "method": "get",
+      "summary": "Get import by id",
+      "operationId": "getImport_1",
+      "parameters": [
+        {
+          "name": "importId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "*/*"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "*/*"
+          ]
+        }
+      ]
+    }
+  ]
+}

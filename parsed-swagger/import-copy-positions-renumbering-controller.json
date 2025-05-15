@@ -1,0 +1,112 @@
+{
+  "controller": "import-copy-positions-renumbering-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/import/copy-positions/project/{projectId}/renumbering/defaults",
+      "method": "post",
+      "summary": "Get default position number and subpoint values for position copy",
+      "operationId": "getDefaultValues",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "*/*"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "*/*"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/import/copy-positions/project/{projectId}/renumbering/validate",
+      "method": "post",
+      "summary": "Validate target position number and subpoint values for position copy",
+      "operationId": "validate",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": []
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": []
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": []
+        }
+      ]
+    }
+  ]
+}

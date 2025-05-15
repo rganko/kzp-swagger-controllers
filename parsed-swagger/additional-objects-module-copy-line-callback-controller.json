@@ -1,0 +1,92 @@
+{
+  "controller": "additional-objects-module-copy-line-callback-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/external/additional-objects/copy-lines/callback/id/{idOfCopyLineOperation}",
+      "method": "post",
+      "summary": "Callback for additional objects module after copy line",
+      "operationId": "callbackCopyUrls",
+      "parameters": [
+        {
+          "name": "idOfCopyLineOperation",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/external/additional-objects/copy-lines/callback/import/{importId}/status",
+      "method": "get",
+      "summary": "Get additional objects copy status",
+      "operationId": "getCopyStatus",
+      "parameters": [
+        {
+          "name": "importId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

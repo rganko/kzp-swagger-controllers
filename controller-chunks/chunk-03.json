@@ -1,0 +1,12 @@
+[
+  "budget-currency-sale-controller",
+  "budget-currency-sale-detail-controller",
+  "budget-data-controller",
+  "budget-drilling-controller",
+  "budget-drilling-production-task-controller",
+  "budget-margin-controller",
+  "budget-snapshot-controller",
+  "budget-table-structure-controller",
+  "budget-transitional-table-controller",
+  "calculation-changelog-controller"
+]

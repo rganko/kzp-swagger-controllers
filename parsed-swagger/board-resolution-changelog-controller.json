@@ -1,0 +1,57 @@
+{
+  "controller": "board-resolution-changelog-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/board-resolution-changelog/{boardResolutionId}",
+      "method": "get",
+      "summary": "Get board resolution changelog",
+      "operationId": "getBoardResolutionChangelog",
+      "parameters": [
+        {
+          "name": "boardResolutionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

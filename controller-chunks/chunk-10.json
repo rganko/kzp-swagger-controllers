@@ -1,0 +1,12 @@
+[
+  "cooperant-offer-request-position-materials-controller",
+  "cooperant-offer-request-questions-internal-controller",
+  "cooperant-offer-requests-internal-controller",
+  "cooperant-people-controller",
+  "cooperant-person-controller",
+  "cooperant-person-internal-controller",
+  "cooperant-position-internal-controller",
+  "cooperant-projects-internal-controller",
+  "cooperant-ships-and-offers-internal-controller",
+  "cooperant-ships-for-realization-controller"
+]

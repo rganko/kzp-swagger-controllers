@@ -1,0 +1,165 @@
+{
+  "controller": "tubing-module-kzp-callback-controller",
+  "endpointCount": 3,
+  "endpoints": [
+    {
+      "path": "/rest/external/tubing/callback/project/{projectId}/kzp/position/{kzpPositionId}",
+      "method": "put",
+      "summary": "Update token for external Tubing Module",
+      "operationId": "updateTokenStatus",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "kzpPositionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/external/tubing/callback/project/{projectId}/kzp/position/{kzpPositionId}/package/{packageId}/valuation-name/{valuationName}",
+      "method": "post",
+      "summary": "Receives callback response from external Tubing Module",
+      "operationId": "kzpLineCallback",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "kzpPositionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "packageId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "valuationName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/external/tubing/callback/project/{projectId}/kzp/position/{kzpPositionId}/refresh-token/token/{token}",
+      "method": "put",
+      "summary": "Receives callback response from external Tubing Module",
+      "operationId": "refreshToken",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "kzpPositionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "token",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

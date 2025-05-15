@@ -1,0 +1,118 @@
+{
+  "controller": "estimated-demand-line-changelog-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/changelog/project/{projectId}/estimated-resources-demand",
+      "method": "post",
+      "summary": "Searches for estimated resources demand from calculation line changelog",
+      "operationId": "search_70",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/changelog/project/{projectId}/estimated-resources-demand/{estimatedDemandId}/change/{trackingId}",
+      "method": "get",
+      "summary": "Estimated resources demand details from calculation line changelog",
+      "operationId": "getDetails_15",
+      "parameters": [
+        {
+          "name": "estimatedDemandId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "trackingId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

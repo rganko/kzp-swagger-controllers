@@ -1,0 +1,68 @@
+{
+  "controller": "cooperant-invoice-internal-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/internal/cooperant/person/{personId}/agreement/{agreementId}/invoice/search",
+      "method": "post",
+      "summary": "Search agreement invoices",
+      "operationId": "getCooperantAgreementDetails",
+      "parameters": [
+        {
+          "name": "personId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "agreementId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

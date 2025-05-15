@@ -1,0 +1,112 @@
+{
+  "controller": "cooperant-changelog-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/rest/cooperant/changelog/{cooperantId}/details/{revisionId}",
+      "method": "get",
+      "summary": "Gets change details for specific revision",
+      "operationId": "getDetails_2",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "revisionId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/rest/cooperant/changelog/{cooperantId}/search",
+      "method": "post",
+      "summary": "Searches for cooperant changelog",
+      "operationId": "search_55",
+      "parameters": [
+        {
+          "name": "cooperantId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Created",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "controller": "cooperant-position-internal-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/internal/cooperant-position/list",
+      "method": "get",
+      "summary": "Get cooperant's position list",
+      "operationId": "getCooperantPositionsList",
+      "parameters": [
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

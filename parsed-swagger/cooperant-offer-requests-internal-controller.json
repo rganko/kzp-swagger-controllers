@@ -1,0 +1,119 @@
+{
+  "controller": "cooperant-offer-requests-internal-controller",
+  "endpointCount": 2,
+  "endpoints": [
+    {
+      "path": "/internal/cooperant/person/{cooperantPersonId}/offer-requests/{offerRequestId}",
+      "method": "get",
+      "summary": "Get cooperant offer request details",
+      "operationId": "getCoopOfferRequest",
+      "parameters": [
+        {
+          "name": "cooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "offerRequestId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/internal/cooperant/person/{cooperantPersonId}/offer-requests/search",
+      "method": "post",
+      "summary": "Search of ships with offers by cooperant person",
+      "operationId": "searchOfferRequests",
+      "parameters": [
+        {
+          "name": "cooperantPersonId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "InternalRequest",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "Ok",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "400",
+          "description": "Bad request",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "Forbidden",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

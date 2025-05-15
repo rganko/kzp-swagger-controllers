@@ -1,0 +1,12 @@
+[
+  "calculation-changelog-details-controller",
+  "calculation-controller",
+  "calculation-line-approve-controller",
+  "calculation-line-bulk-approve-controller",
+  "calculation-line-changelog-controller",
+  "calculation-line-changelog-details-controller",
+  "calculation-line-comment-controller",
+  "calculation-line-controller",
+  "calculation-line-edit-controller",
+  "calculation-line-sum-controller"
+]

@@ -1,0 +1,57 @@
+{
+  "controller": "coop-offer-request-receiver-with-offer-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/cooperation/offer-request/{offerRequestId}/receiver-with-offer",
+      "method": "get",
+      "summary": "Gets all receivers with offer data",
+      "operationId": "listAll",
+      "parameters": [
+        {
+          "name": "offerRequestId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

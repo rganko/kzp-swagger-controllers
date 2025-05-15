@@ -1,0 +1,12 @@
+[
+  "project-controller",
+  "project-energy-factor-controller",
+  "project-get-coop-coordinators-controller",
+  "project-membership-changelog-controller",
+  "project-membership-changelog-details-controller",
+  "project-membership-controller",
+  "project-order-controller",
+  "project-search-controller",
+  "report-controller",
+  "report-executed-offer-xls-controller"
+]

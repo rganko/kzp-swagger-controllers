@@ -1,0 +1,2675 @@
+{
+  "totalControllers": 221,
+  "totalEndpoints": 731,
+  "controllers": {
+    "send-to-production-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/send-to-production/config/import/{importId}",
+        "/rest/send-to-production/config/project/{projectId}/calculation/{calculationId}",
+        "/rest/send-to-production/import/{importId}/project/{projectId}/calculation/{calculationId}"
+      ]
+    },
+    "project-controller": {
+      "endpointCount": 9,
+      "methods": [
+        "post",
+        "get",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project",
+        "/rest/project/{projectId}",
+        "/rest/project/{projectId}",
+        "/rest/project/{projectId}",
+        "/rest/project/{projectId}/approve",
+        "/rest/project/{projectId}/cancel",
+        "/rest/project/{projectId}/line-approvals",
+        "/rest/project/{projectId}/resume",
+        "/rest/project/{projectId}/terminate"
+      ]
+    },
+    "material-verification-line-controller": {
+      "endpointCount": 6,
+      "methods": [
+        "post",
+        "put",
+        "delete",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/verification/position/{verificationPositionId}/line/{verificationLineId}/material",
+        "/rest/project/{projectId}/verification/position/{verificationPositionId}/line/{verificationLineId}/material/{id}",
+        "/rest/project/{projectId}/verification/position/{verificationPositionId}/line/{verificationLineId}/material/{id}",
+        "/rest/project/{projectId}/verification/position/{verificationPositionId}/line/{verificationLineId}/material/bulk-add",
+        "/rest/project/{projectId}/verification/position/{verificationPositionId}/line/{verificationLineId}/material/search",
+        "/rest/project/{projectId}/verification/position/{verificationPositionId}/line/{verificationLineId}/material/sum"
+      ]
+    },
+    "verification-line-controller": {
+      "endpointCount": 7,
+      "methods": [
+        "post",
+        "get",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/verification/position/{positionId}/line",
+        "/rest/project/{projectId}/verification/position/{positionId}/line/{id}",
+        "/rest/project/{projectId}/verification/position/{positionId}/line/{id}",
+        "/rest/project/{projectId}/verification/position/{positionId}/line/{id}",
+        "/rest/project/{projectId}/verification/position/{positionId}/line/{id}/tw-approve",
+        "/rest/project/{projectId}/verification/position/{positionId}/line/{id}/tw-disapprove",
+        "/rest/project/{projectId}/verification/position/{positionId}/line/search"
+      ]
+    },
+    "verification-position-controller": {
+      "endpointCount": 10,
+      "methods": [
+        "post",
+        "get",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/verification/position",
+        "/rest/project/{projectId}/verification/position/{id}",
+        "/rest/project/{projectId}/verification/position/{id}",
+        "/rest/project/{projectId}/verification/position/{id}",
+        "/rest/project/{projectId}/verification/position/{id}/navigation",
+        "/rest/project/{projectId}/verification/position/{id}/nw-approve",
+        "/rest/project/{projectId}/verification/position/{id}/nw-disapprove",
+        "/rest/project/{projectId}/verification/position/{id}/tw-approve",
+        "/rest/project/{projectId}/verification/position/search",
+        "/rest/project/{projectId}/verification/position/tw-approved"
+      ]
+    },
+    "project-membership-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "put",
+        "delete",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/membership",
+        "/rest/project/{projectId}/membership/{membershipId}",
+        "/rest/project/{projectId}/membership/{membershipId}",
+        "/rest/project/{projectId}/membership/search",
+        "/rest/project/{projectId}/membership/search-for-protocol-approval/list"
+      ]
+    },
+    "vor-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/vor",
+        "/rest/project/{projectId}/kzp/vor/{id}",
+        "/rest/project/{projectId}/kzp/vor/{id}",
+        "/rest/project/{projectId}/kzp/vor/{id}/cancel",
+        "/rest/project/{projectId}/kzp/vor/search"
+      ]
+    },
+    "structure-group-position-controller": {
+      "endpointCount": 9,
+      "methods": [
+        "post",
+        "put",
+        "delete",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/structure",
+        "/rest/project/{projectId}/kzp/structure/{id}",
+        "/rest/project/{projectId}/kzp/structure/{id}",
+        "/rest/project/{projectId}/kzp/structure/{id}/budget-data",
+        "/rest/project/{projectId}/kzp/structure/all",
+        "/rest/project/{projectId}/kzp/structure/caption-data",
+        "/rest/project/{projectId}/kzp/structure/from-kzp-positions",
+        "/rest/project/{projectId}/kzp/structure/header/all",
+        "/rest/project/{projectId}/kzp/structure/short-data/all"
+      ]
+    },
+    "structure-param-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get",
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/structure/param",
+        "/rest/project/{projectId}/kzp/structure/param",
+        "/rest/project/{projectId}/kzp/structure/param",
+        "/rest/project/{projectId}/kzp/structure/param/confirm"
+      ]
+    },
+    "kzp-reception-controller": {
+      "endpointCount": 6,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/reception/line/{kzpLineId}/acceptance-status/edit",
+        "/rest/project/{projectId}/kzp/reception/line/{kzpLineId}/department/edit",
+        "/rest/project/{projectId}/kzp/reception/line/department",
+        "/rest/project/{projectId}/kzp/reception/line/quality-control",
+        "/rest/project/{projectId}/kzp/reception/line/search",
+        "/rest/project/{projectId}/kzp/reception/position/search"
+      ]
+    },
+    "kzp-position-controller": {
+      "endpointCount": 16,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position",
+        "/rest/project/{projectId}/kzp/position/{positionId}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/approval-summary",
+        "/rest/project/{projectId}/kzp/position/{positionId}/navigation",
+        "/rest/project/{projectId}/kzp/position/{positionId}/valuation-summary",
+        "/rest/project/{projectId}/kzp/position/approval-summary",
+        "/rest/project/{projectId}/kzp/position/budget/search",
+        "/rest/project/{projectId}/kzp/position/for-structure/search",
+        "/rest/project/{projectId}/kzp/position/generals/search",
+        "/rest/project/{projectId}/kzp/position/position-no/search",
+        "/rest/project/{projectId}/kzp/position/search",
+        "/rest/project/{projectId}/kzp/position/simple/search",
+        "/rest/project/{projectId}/kzp/position/standard/search",
+        "/rest/project/{projectId}/kzp/position/subpoints",
+        "/rest/project/{projectId}/kzp/position/valuation-summary",
+        "/rest/project/{projectId}/kzp/position/with-drawing-no"
+      ]
+    },
+    "kzp-position-edit-controller": {
+      "endpointCount": 9,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/cancel",
+        "/rest/project/{projectId}/kzp/position/{positionId}/close",
+        "/rest/project/{projectId}/kzp/position/{positionId}/execution-h-date-from",
+        "/rest/project/{projectId}/kzp/position/{positionId}/execution-h-date-to",
+        "/rest/project/{projectId}/kzp/position/{positionId}/kr-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/tk-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/tp-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/uncancel"
+      ]
+    },
+    "verification-kzp-line-thread-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/verification-line/{lineId}/available-line-threads/list",
+        "/rest/project/{projectId}/kzp/position/{positionId}/verification-line/{lineId}/thread-line/{threadLineId}"
+      ]
+    },
+    "kzp-position-to-structure-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/structure/{structureId}",
+        "/rest/project/{projectId}/kzp/position/structure/{structureId}/bulk",
+        "/rest/project/{projectId}/kzp/position/structure/reassign-shipowner-positions"
+      ]
+    },
+    "kzp-position-master-team-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/master-team",
+        "/rest/project/{projectId}/kzp/position/{positionId}/master-team"
+      ]
+    },
+    "kzp-line-edit-controller": {
+      "endpointCount": 9,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/assign-to-verification-position",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/budget",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/cancel",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/cancel-completely",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/executor",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/internal-cooperation-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/internal-cooperation-disapprove",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/uncancel"
+      ]
+    },
+    "kzp-line-controller": {
+      "endpointCount": 11,
+      "methods": [
+        "post",
+        "get",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{id}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/decrease",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/divide",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/increase",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/add-from-resources",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/delete-all",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/generals/search",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/search",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/standard/search"
+      ]
+    },
+    "kzp-line-approval-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/kr-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/tk-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/tk-disapprove",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/tp-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/tp-disapprove"
+      ]
+    },
+    "kzp-line-reception-comment-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post",
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/reception/comment",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/reception/comment/list",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/reception/comment/read"
+      ]
+    },
+    "kzp-line-material-approval-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/material-kr-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/material-tk-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/material-tk-disapprove",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/material-tp-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/material-tp-disapprove"
+      ]
+    },
+    "kzp-line-froze-execution-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/froze-execution"
+      ]
+    },
+    "estimated-resources-demand-kzp-line-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/estimated-resources-demand",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/estimated-resources-demand/{id}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/estimated-resources-demand/{id}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/estimated-resources-demand/search"
+      ]
+    },
+    "workload-valuation-kzp-line-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{kzpLineId}/workload",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{kzpLineId}/workload/{id}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{kzpLineId}/workload/{id}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{kzpLineId}/workload/bulk",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{kzpLineId}/workload/search"
+      ]
+    },
+    "kzp-line-package-controller": {
+      "endpointCount": 8,
+      "methods": [
+        "post",
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{id}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{linePackageId}",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{linePackageId}/delete-with-lines",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{linePackageId}/kr-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{linePackageId}/kr-disapprove",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{linePackageId}/tp-approve",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-package/{linePackageId}/tp-disapprove"
+      ]
+    },
+    "material-kzp-line-controller": {
+      "endpointCount": 8,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/{id}",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/{id}",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/bulk-add",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/copy-from-tk-list",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/decreasing",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/delete",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/material/search"
+      ]
+    },
+    "kzp-executor-assignment-controller": {
+      "endpointCount": 12,
+      "methods": [
+        "put",
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/executor-assignment/line",
+        "/rest/project/{projectId}/kzp/executor-assignment/line/approve",
+        "/rest/project/{projectId}/kzp/executor-assignment/line/clear-unapproved",
+        "/rest/project/{projectId}/kzp/executor-assignment/line/search",
+        "/rest/project/{projectId}/kzp/executor-assignment/line/search/sum",
+        "/rest/project/{projectId}/kzp/executor-assignment/line/set-cooperation",
+        "/rest/project/{projectId}/kzp/executor-assignment/line/set-cooperation/import",
+        "/rest/project/{projectId}/kzp/executor-assignment/position/{kzpPositionId}/line/{kzpLineId}",
+        "/rest/project/{projectId}/kzp/executor-assignment/position/{kzpPositionId}/line/{kzpLineId}/approve",
+        "/rest/project/{projectId}/kzp/executor-assignment/position/{kzpPositionId}/line/{kzpLineId}/cooperation",
+        "/rest/project/{projectId}/kzp/executor-assignment/position/{kzpPositionId}/line/{kzpLineId}/return-from-internal-cooperation",
+        "/rest/project/{projectId}/kzp/executor-assignment/position/search"
+      ]
+    },
+    "energy-factor-settlement-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/energy-factor",
+        "/rest/project/{projectId}/energy-factor/{id}",
+        "/rest/project/{projectId}/energy-factor/search"
+      ]
+    },
+    "calculation-controller": {
+      "endpointCount": 9,
+      "methods": [
+        "post",
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation",
+        "/rest/project/{projectId}/calculation/{calculationId}",
+        "/rest/project/{projectId}/calculation/{calculationId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/close",
+        "/rest/project/{projectId}/calculation/{calculationId}/complete",
+        "/rest/project/{projectId}/calculation/{calculationId}/remove",
+        "/rest/project/{projectId}/calculation/{calculationId}/set-current",
+        "/rest/project/{projectId}/calculation/search"
+      ]
+    },
+    "calculation-position-controller": {
+      "endpointCount": 15,
+      "methods": [
+        "post",
+        "get",
+        "delete",
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/approval-summary",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/navigation",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/subpoints",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/subpoints-and-valutions-for-tubing-module",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/valuation-summary",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/approval-summary",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/bulk-delete-by-ids",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/bulk/order-in-user-sequence",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/delete-all",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/new/next-order-in-user-sequence",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/search",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/valuation-summary"
+      ]
+    },
+    "calculation-position-edit-controller": {
+      "endpointCount": 14,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/active",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/cancel",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/estimated-cost",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/execution-h-dates",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/kr-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/real-cost",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/sale-value",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/technologist-valuation",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/tk-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/tp-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/tp-disapprove",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/uncancel",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/unit-valuation"
+      ]
+    },
+    "calculation-line-controller": {
+      "endpointCount": 7,
+      "methods": [
+        "post",
+        "get",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/add-cooperation",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/add-from-resources",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/delete-all",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/search"
+      ]
+    },
+    "calculation-line-edit-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/cancel",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/cost-calculation",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/uncancel"
+      ]
+    },
+    "workload-valuation-calculation-line-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/workload",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/workload/{id}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/workload/{id}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/workload/bulk",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/workload/search"
+      ]
+    },
+    "calculation-line-approve-controller": {
+      "endpointCount": 6,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/kr-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/kr-disapprove",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/tk-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/tk-disapprove",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/tp-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/tp-disapprove"
+      ]
+    },
+    "material-calculation-line-controller": {
+      "endpointCount": 6,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/material",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/material/{id}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/material/{id}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/material/bulk-add",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/material/delete",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/material/search"
+      ]
+    },
+    "estimated-resources-demand-calculation-line-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/estimated-resources-demand",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/estimated-resources-demand/{id}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/estimated-resources-demand/{id}",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/estimated-resources-demand/search"
+      ]
+    },
+    "calculation-line-bulk-approve-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/tk-approve",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/tp-approve"
+      ]
+    },
+    "budget-currency-sale-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/sale",
+        "/rest/project/{projectId}/budget/{budgetId}/sale",
+        "/rest/project/{projectId}/budget/currency/{id}"
+      ]
+    },
+    "budget-currency-sale-detail-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/sale/{saleId}/detail",
+        "/rest/project/{projectId}/budget/{budgetId}/sale/{saleId}/detail/{detailId}",
+        "/rest/project/{projectId}/budget/{budgetId}/sale/{saleId}/detail/{detailId}",
+        "/rest/project/{projectId}/budget/{budgetId}/sale/{saleId}/detail/search"
+      ]
+    },
+    "budget-currency-discount-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/discount",
+        "/rest/project/{projectId}/budget/{budgetId}/discount",
+        "/rest/project/{projectId}/budget/{budgetId}/discount/{id}"
+      ]
+    },
+    "budget-data-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "put",
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/data",
+        "/rest/project/{projectId}/budget/{budgetId}/data",
+        "/rest/project/{projectId}/budget/{budgetId}/data/recalculate",
+        "/rest/project/{projectId}/budget/{budgetId}/data/special-edit-case",
+        "/rest/project/{projectId}/budget/{budgetId}/data/special-edit-case"
+      ]
+    },
+    "budget-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "put",
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/approve",
+        "/rest/project/{projectId}/budget/financial-summary",
+        "/rest/project/{projectId}/budget/header",
+        "/rest/project/{projectId}/budget/tree"
+      ]
+    },
+    "task-tracker-project-comment-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "put",
+        "delete",
+        "post"
+      ],
+      "paths": [
+        "/rest/project/task-tracker-comment/{projectId}",
+        "/rest/project/task-tracker-comment/{projectId}",
+        "/rest/project/task-tracker-comment/list"
+      ]
+    },
+    "calculation-position-sale-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/position/{positionId}/sale",
+        "/rest/position/{positionId}/sale/{saleId}",
+        "/rest/position/{positionId}/sale/{saleId}",
+        "/rest/position/{positionId}/sale/search"
+      ]
+    },
+    "import-positions-with-lines-controller": {
+      "endpointCount": 9,
+      "methods": [
+        "get",
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/import/positions-with-lines/{importId}/config",
+        "/rest/import/positions-with-lines/{importId}/positions/{positionId}",
+        "/rest/import/positions-with-lines/{importId}/positions/{positionId}/lines/{lineId}",
+        "/rest/import/positions-with-lines/{importId}/positions/{positionId}/lines/search",
+        "/rest/import/positions-with-lines/{importId}/positions/search",
+        "/rest/import/positions-with-lines/{importId}/positions/search/v2",
+        "/rest/import/positions-with-lines/{importId}/run",
+        "/rest/import/positions-with-lines/project/{projectId}/calculation/{calculationId}",
+        "/rest/import/positions-with-lines/project/{projectId}/search"
+      ]
+    },
+    "import-kzp-position-translations-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get",
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/import/kzp-position-translations/{importId}/config",
+        "/rest/import/kzp-position-translations/{importId}/items/search",
+        "/rest/import/kzp-position-translations/{importId}/run",
+        "/rest/import/kzp-position-translations/project/{projectId}/kzp"
+      ]
+    },
+    "import-final-sale-value-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/import/final-sale-value/{importId}/config",
+        "/rest/import/final-sale-value/{importId}/items/search",
+        "/rest/import/final-sale-value/{importId}/run"
+      ]
+    },
+    "hull-resource-executor-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/hull-resource-executor/list",
+        "/rest/hull-resource-executor/project/{projectId}",
+        "/rest/hull-resource-executor/project/{projectId}/department/{departmentId}"
+      ]
+    },
+    "tubing-module-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "put",
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/tubing/{id}/front-should-refresh-data-flag/reset",
+        "/rest/external/tubing/{id}/token-status",
+        "/rest/external/tubing/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+        "/rest/external/tubing/project/{projectId}/kzp/position/{positionId}"
+      ]
+    },
+    "tubing-module-kzp-callback-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/tubing/callback/project/{projectId}/kzp/position/{kzpPositionId}",
+        "/rest/external/tubing/callback/project/{projectId}/kzp/position/{kzpPositionId}/package/{packageId}/valuation-name/{valuationName}",
+        "/rest/external/tubing/callback/project/{projectId}/kzp/position/{kzpPositionId}/refresh-token/token/{token}"
+      ]
+    },
+    "tubing-module-calculation-callback-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/tubing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+        "/rest/external/tubing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}",
+        "/rest/external/tubing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/refresh-token/token/{token}"
+      ]
+    },
+    "external-access-pricing-module-verification-callback-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/pricing/callback/project/{projectId}/verification/position/{positionId}/line/{lineId}",
+        "/rest/external/pricing/callback/project/{projectId}/verification/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "external-access-pricing-module-kzp-callback-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/pricing/callback/project/{projectId}/kzp/position/{positionId}/line/{lineId}",
+        "/rest/external/pricing/callback/project/{projectId}/kzp/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "external-access-pricing-module-calculation-callback-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/pricing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/external/pricing/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "additional-objects-module-kzp-callback-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/additional-objects/callback/project/{projectId}/kzp/position/{positionId}/line/{lineId}",
+        "/rest/external/additional-objects/callback/project/{projectId}/kzp/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "additional-objects-module-calculation-callback-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/additional-objects/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/external/additional-objects/callback/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "cooperator-contact-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperator/{id}/contact-details"
+      ]
+    },
+    "cooperator-accounting-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperator/{id}/bank-details"
+      ]
+    },
+    "cooperator-additional-information-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperator/{id}/additional-information"
+      ]
+    },
+    "cooperator-bank-account-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/cooperator/{cooperatorId}/bank-account",
+        "/rest/cooperator/{cooperatorId}/bank-account/{bankAccountId}",
+        "/rest/cooperator/{cooperatorId}/bank-account/{bankAccountId}"
+      ]
+    },
+    "cooperator-industry-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/cooperator/{cooperantId}/industry",
+        "/rest/cooperator/{cooperantId}/industry/{cooperatorIndustryId}",
+        "/rest/cooperator/{cooperantId}/industry/{cooperatorIndustryId}"
+      ]
+    },
+    "cooperator-register-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperator/register-data",
+        "/rest/cooperator/register-data/{id}"
+      ]
+    },
+    "coop-offer-controller": {
+      "endpointCount": 8,
+      "methods": [
+        "get",
+        "put",
+        "delete",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer/{id}",
+        "/rest/cooperation/offer/{id}",
+        "/rest/cooperation/offer/{id}",
+        "/rest/cooperation/offer/{id}/accept",
+        "/rest/cooperation/offer/{id}/allow-changes",
+        "/rest/cooperation/offer/{id}/update-version",
+        "/rest/cooperation/offer/{offerRequestId}",
+        "/rest/cooperation/offer/search"
+      ]
+    },
+    "coop-offer-request-controller": {
+      "endpointCount": 11,
+      "methods": [
+        "get",
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{id}",
+        "/rest/cooperation/offer-request/{id}",
+        "/rest/cooperation/offer-request/{id}/print",
+        "/rest/cooperation/offer-request/{id}/print/{receiverId}",
+        "/rest/cooperation/offer-request/{offerRequestId}/finish-offering",
+        "/rest/cooperation/offer-request/{offerRequestId}/offers/accept",
+        "/rest/cooperation/offer-request/{offerRequestId}/re-offer",
+        "/rest/cooperation/offer-request/{offerRequestId}/reject",
+        "/rest/cooperation/offer-request/{projectId}",
+        "/rest/cooperation/offer-request/for-agreement-annex/{agreementId}",
+        "/rest/cooperation/offer-request/search"
+      ]
+    },
+    "coop-offer-request-receiver-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "get",
+        "put",
+        "delete",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request-receiver/{id}",
+        "/rest/cooperation/offer-request-receiver/{id}",
+        "/rest/cooperation/offer-request-receiver/{id}",
+        "/rest/cooperation/offer-request-receiver/{offerRequestId}",
+        "/rest/cooperation/offer-request-receiver/search"
+      ]
+    },
+    "coop-kzp-line-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "get",
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/kzp-line/{kzpLineId}",
+        "/rest/cooperation/kzp-line/{kzpLineId}",
+        "/rest/cooperation/kzp-line/{kzpLineId}/coop-specialist-user/candidate/list",
+        "/rest/cooperation/kzp-line/{kzpLineId}/cooperation-specialist",
+        "/rest/cooperation/kzp-line/{kzpLineId}/reject"
+      ]
+    },
+    "coop-agreement-controller": {
+      "endpointCount": 17,
+      "methods": [
+        "post",
+        "get",
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/e-sign/start",
+        "/rest/cooperation/agreement/{id}",
+        "/rest/cooperation/agreement/{id}",
+        "/rest/cooperation/agreement/{id}/cancel",
+        "/rest/cooperation/agreement/{id}/close",
+        "/rest/cooperation/agreement/{id}/partial-acceptance",
+        "/rest/cooperation/agreement/{id}/sign",
+        "/rest/cooperation/agreement/businessIds/search",
+        "/rest/cooperation/agreement/cooperation-type/{projectId}",
+        "/rest/cooperation/agreement/for-annex/search",
+        "/rest/cooperation/agreement/from-offer/{offerId}",
+        "/rest/cooperation/agreement/new/{id}",
+        "/rest/cooperation/agreement/preview/{agreementId}",
+        "/rest/cooperation/agreement/project/{projectId}/cooperation-markup",
+        "/rest/cooperation/agreement/project/{projectId}/from-line/",
+        "/rest/cooperation/agreement/search",
+        "/rest/cooperation/agreement/search/annex/{parentId}"
+      ]
+    },
+    "coop-agreement-comment-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/comment",
+        "/rest/cooperation/agreement/{agreementId}/comment/{commentId}",
+        "/rest/cooperation/agreement/{agreementId}/comment/{commentId}",
+        "/rest/cooperation/agreement/{agreementId}/comment/search"
+      ]
+    },
+    "acceptance-protocol-status-controller": {
+      "endpointCount": 6,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/final/reject",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/final/send-to-signature",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/final/sign",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/partial/reject",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/partial/send-to-signature",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/partial/sign"
+      ]
+    },
+    "acceptance-protocol-kzp-line-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/line/{lineId}",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/line/{lineId}/confirm",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/line/{lineId}/unconfirm",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/line/confirm"
+      ]
+    },
+    "acceptance-protocol-controller": {
+      "endpointCount": 11,
+      "methods": [
+        "get",
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{id}",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/comments",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/final/preview",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/partial/preview",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/final",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/final/{protocolId}",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/final/{protocolId}/lines/search",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/final/mark/{protocolId}",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/partial/{protocolId}",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/search",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/summary-cost"
+      ]
+    },
+    "acceptance-protocol-partial-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/partial",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/partial/{id}"
+      ]
+    },
+    "cooperant-controller": {
+      "endpointCount": 13,
+      "methods": [
+        "post",
+        "get",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/cooperant",
+        "/rest/cooperant/{id}",
+        "/rest/cooperant/{id}",
+        "/rest/cooperant/{id}",
+        "/rest/cooperant/{id}/accept",
+        "/rest/cooperant/{id}/reject",
+        "/rest/cooperant/{id}/verify",
+        "/rest/cooperant/by-nip/{nip}",
+        "/rest/cooperant/by-tax-id/{taxId}",
+        "/rest/cooperant/for-coop-offer-request-lines/list",
+        "/rest/cooperant/list/byLoginAD",
+        "/rest/cooperant/new/list",
+        "/rest/cooperant/search"
+      ]
+    },
+    "cooperant-work-type-blocking-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperant/{cooperantId}/work-type/block",
+        "/rest/cooperant/{cooperantId}/work-type/unblock"
+      ]
+    },
+    "cooperant-work-type-acceptance-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperant/{cooperantId}/work-type/accept",
+        "/rest/cooperant/{cooperantId}/work-type/reject"
+      ]
+    },
+    "cooperant-blocking-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/rest/cooperant/{cooperantId}/block",
+        "/rest/cooperant/{cooperantId}/unblock"
+      ]
+    },
+    "cooperant-person-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "put",
+        "delete"
+      ],
+      "paths": [
+        "/rest/cooperant/{cooperantId}/person",
+        "/rest/cooperant/{cooperantId}/person/{cooperantDataPersonId}",
+        "/rest/cooperant/{cooperantId}/person/{cooperantDataPersonId}",
+        "/rest/cooperant/{cooperantId}/person/{cooperantPersonId}/ad-account",
+        "/rest/cooperant/{cooperantId}/person/{cooperantPersonId}/reset-password"
+      ]
+    },
+    "cooperant-offer-internal-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/offer-request/{offerRequestId}/offer",
+        "/internal/cooperant/person/{personId}/offer-request/{offerRequestId}/offer/change-request"
+      ]
+    },
+    "cooperant-acceptance-protocol-lines-internal-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/{protocolId}/lines/{lineId}/approve",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/{protocolId}/lines/{lineId}/deny",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/{protocolId}/lines/search"
+      ]
+    },
+    "cooperant-agreement-acceptance-protocols-internal-controller": {
+      "endpointCount": 11,
+      "methods": [
+        "get",
+        "put",
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}/financial-approve",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}/realization-approve",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{id}/status/REJECTED_K",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/final/{protocolId}/preview",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{id}",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{id}/financial-approve",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{protocolId}/preview",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/{protocolId}/status/REJECTED_K",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/partial/list",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/acceptance-protocol/search"
+      ]
+    },
+    "cooperant-employees-internal-controller": {
+      "endpointCount": 8,
+      "methods": [
+        "get",
+        "post",
+        "put"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees/{employeeId}",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees/{employeeId}",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees/{employeeId}/ships-for-realization",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees/basic-data/{employeeId}",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees/permits-notifications/{employeeId}",
+        "/internal/cooperant/person/{loggedCooperantPersonId}/employees/portal-users"
+      ]
+    },
+    "cooperant-offer-request-participation-declaration-internal-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "put"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/offer-request/{offerRequestId}/declaration/participate",
+        "/internal/cooperant/person/{cooperantPersonId}/offer-request/{offerRequestId}/declaration/resignation",
+        "/internal/cooperant/person/{cooperantPersonId}/offer-request/{offerRequestId}/declaration/undo"
+      ]
+    },
+    "webcon-update-redis-entry-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/webcon/update-redis-entry",
+        "/rest/webcon/update-redis-entry/{key}",
+        "/rest/webcon/update-redis-entry/{key}"
+      ]
+    },
+    "webcon-context-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "get",
+        "delete",
+        "post"
+      ],
+      "paths": [
+        "/rest/webcon/cooperation/project/{projectId}/offer-request/{offerRequestId}/attachments",
+        "/rest/webcon/project/{projectId}/attachment/{attachmentId}/delete",
+        "/rest/webcon/project/{projectId}/attachments/search",
+        "/rest/webcon/project/{projectId}/context/{contextId}/process-context",
+        "/rest/webcon/project/{projectId}/prepare-context"
+      ]
+    },
+    "search-engine-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/search-engine",
+        "/rest/search-engine/import-index-data"
+      ]
+    },
+    "report-tubing-module-copy-xls-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/report/tubing-module-copy-xls/{reportId}/download",
+        "/rest/report/tubing-module-copy-xls/{tubingPositionId}"
+      ]
+    },
+    "report-technologist-load-xls-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/report/technologist-load-xls",
+        "/rest/report/technologist-load-xls/{reportId}/download",
+        "/rest/report/technologist-load-xls/kzp"
+      ]
+    },
+    "report-executed-offer-xls-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/report/executed-offer-xls/{reportId}/download",
+        "/rest/report/executed-offer-xls/project/{projectId}/calculation/{calculationId}"
+      ]
+    },
+    "board-resolution-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/projects/{projectId}/board-resolution",
+        "/rest/projects/{projectId}/board-resolution/{boardResolutionId}",
+        "/rest/projects/{projectId}/board-resolution/{boardResolutionId}/attachment",
+        "/rest/projects/{projectId}/board-resolution/search"
+      ]
+    },
+    "verification-position-comment-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/verification/position/{positionId}/comment",
+        "/rest/project/{projectId}/verification/position/{positionId}/comment/search"
+      ]
+    },
+    "project-card-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/project-card/role-candidates/search",
+        "/rest/project/{projectId}/project-card/user",
+        "/rest/project/{projectId}/project-card/user/{membershipId}",
+        "/rest/project/{projectId}/project-card/user/list"
+      ]
+    },
+    "project-card-extra-access-user-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/project-card/extra-access/search"
+      ]
+    },
+    "tk-material-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/tk-drawings/{nodeId}/materials/search"
+      ]
+    },
+    "tk-drawing-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/tk-drawings/{drawingId}/change-cards/search",
+        "/rest/project/{projectId}/kzp/tk-drawings/search"
+      ]
+    },
+    "material-kzp-position-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/material/search",
+        "/rest/project/{projectId}/kzp/position/{positionId}/material/sum"
+      ]
+    },
+    "tk-change-card-approver-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/tk-drawings/{drawingId}/change-cards/{changeCardId}/approve"
+      ]
+    },
+    "kzp-line-for-material-copy-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/search-for-material-copy"
+      ]
+    },
+    "kzp-line-valuation-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-valuation/search",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line-valuation/summary"
+      ]
+    },
+    "kzp-line-cooperation-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/{kzpLineId}/cooperation/send",
+        "/rest/project/{projectId}/kzp/position/{kzpPositionId}/line/cooperation/send"
+      ]
+    },
+    "kzp-line-package-search-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/line-package/list/simple",
+        "/rest/project/{projectId}/kzp/line-package/search"
+      ]
+    },
+    "project-get-coop-coordinators-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/coop-coordinators",
+        "/rest/project/{projectId}/mpk/{mpkId}/coop-coordinators"
+      ]
+    },
+    "material-calculation-position-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/material/group",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/material/search",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/material/sum"
+      ]
+    },
+    "calculation-line-valuation-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line-valuation/search",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line-valuation/summary"
+      ]
+    },
+    "calculation-position-import-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/import-batch",
+        "/rest/project/calculation/position/import/parse-excel"
+      ]
+    },
+    "calculation-position-valuation-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position-valuation/search",
+        "/rest/project/{projectId}/calculation/{calculationId}/position-valuation/summary"
+      ]
+    },
+    "budget-margin-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/margin"
+      ]
+    },
+    "budget-drilling-production-task-controller": {
+      "endpointCount": 5,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/production-task/from-budget-root",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/production-task/from-external-system",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/production-task/from-kzp",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/production-task/rge-type",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/production-task/rge-type/from-budget-root"
+      ]
+    },
+    "budget-drilling-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/agreements",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/invoice/row-type/{rowType}",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/materials-from-external-system",
+        "/rest/project/{projectId}/budget/{budgetId}/drilling/materials-from-kzp"
+      ]
+    },
+    "budget-create-snapshot-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/snapshot"
+      ]
+    },
+    "budget-snapshot-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/snapshot/{budgetId}/currency-sale",
+        "/rest/project/{projectId}/budget/snapshot/{budgetSnapshotId}",
+        "/rest/project/{projectId}/budget/snapshot/search",
+        "/rest/project/{projectId}/budget/snapshot/tree/{budgetSnapshotId}"
+      ]
+    },
+    "task-tracker-data-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/task-tracker-data",
+        "/rest/project/task-tracker-data/newest"
+      ]
+    },
+    "project-search-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/add-index/{projectId}",
+        "/rest/project/search",
+        "/rest/project/search-for-position-copy",
+        "/rest/project/simple-search"
+      ]
+    },
+    "power-of-attorney-user-project-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/power-of-attorney/user/{userId}/search"
+      ]
+    },
+    "project-order-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/order/status"
+      ]
+    },
+    "kr-task-tracker-data-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/project/kr-task-tracker-data",
+        "/rest/project/kr-task-tracker-data/newest"
+      ]
+    },
+    "project-energy-factor-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/project/for-energy-factor/search"
+      ]
+    },
+    "production-project-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/production/project/search"
+      ]
+    },
+    "calculation-position-sale-comment-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/position/{positionId}/sale-comment",
+        "/rest/position/{positionId}/sale-comment/search"
+      ]
+    },
+    "calculation-position-comment-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/position/{positionId}/comment",
+        "/rest/position/{positionId}/comment/search"
+      ]
+    },
+    "kzp-position-material-cost-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/material-cost/project/{projectId}/kzp-position/{kzpPositionId}",
+        "/rest/material-cost/project/{projectId}/kzp-position/{kzpPositionId}/sum-costs"
+      ]
+    },
+    "calculation-line-comment-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/line/{lineId}/comment",
+        "/rest/line/{lineId}/comment/{commentId}",
+        "/rest/line/{lineId}/comment/search"
+      ]
+    },
+    "kzp-position-comment-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/kzp/position/{positionId}/comment",
+        "/rest/kzp/position/{positionId}/comment/search"
+      ]
+    },
+    "kzp-position-search-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/kzp/position/position-no/search"
+      ]
+    },
+    "kzp-line-comment-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/kzp/line/{lineId}/comment",
+        "/rest/kzp/line/{lineId}/comment/{commentId}",
+        "/rest/kzp/line/{lineId}/comment/search"
+      ]
+    },
+    "import-sale-cost-kzp-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/import/sale-cost/project/{projectId}/kzp/{importId}/items/search",
+        "/rest/import/sale-cost/project/{projectId}/kzp/{importId}/run",
+        "/rest/import/sale-cost/project/{projectId}/kzp/prepare"
+      ]
+    },
+    "import-sale-cost-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/import/sale-cost/project/{projectId}/calculation/{calculationId}",
+        "/rest/import/sale-cost/project/{projectId}/calculation/{calculationId}/{importId}/items/search",
+        "/rest/import/sale-cost/project/{projectId}/calculation/{calculationId}/{importId}/run"
+      ]
+    },
+    "import-copy-positions-renumbering-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/import/copy-positions/project/{projectId}/renumbering/defaults",
+        "/rest/import/copy-positions/project/{projectId}/renumbering/validate"
+      ]
+    },
+    "import-copy-positions-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/import/copy-positions/{importId}/config",
+        "/rest/import/copy-positions/{importId}/items",
+        "/rest/import/copy-positions/project/{projectId}/calculation/{calculationId}",
+        "/rest/import/copy-positions/project/{projectId}/kzp"
+      ]
+    },
+    "import-copy-merge-positions-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/import/copy-merge-positions/{importId}/config",
+        "/rest/import/copy-merge-positions/{importId}/items",
+        "/rest/import/copy-merge-positions/project/{projectId}/kzp"
+      ]
+    },
+    "gsr-report-controller": {
+      "endpointCount": 34,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/gsr-report/ADDITIONAL_OBJECTS/project/{projectId}/calculation-line/{lineId}",
+        "/rest/gsr-report/ADDITIONAL_OBJECTS/project/{projectId}/kzp-line/{lineId}",
+        "/rest/gsr-report/APPROVED_LINES_IN_KZP/project/{projectId}",
+        "/rest/gsr-report/APPROVED_POSITIONS_BY_TECHNOLOGISTS_IN_KZP",
+        "/rest/gsr-report/APPROVED_POSITIONS_BY_TECHNOLOGISTS_ON_OFFERS",
+        "/rest/gsr-report/BUDGET_PER_DATE",
+        "/rest/gsr-report/CHANGELOG",
+        "/rest/gsr-report/COMPARATION_SALE_AMOUNT_OF_ACCEPTED_OFFER",
+        "/rest/gsr-report/DEPARTMENT_COVERAGE_BY_POSITIONS",
+        "/rest/gsr-report/ENERGY_FACTORS_BY_PROJECT",
+        "/rest/gsr-report/ENERGY_FACTORS_MONTHLY_CONSUMPTION",
+        "/rest/gsr-report/FINAL_SPECIFICATION_OF_ACCEPTED_OFFER",
+        "/rest/gsr-report/IMPORT_POSITIONS/project/{projectId}/import/{importId}",
+        "/rest/gsr-report/KZP_LINE_DISTRIBUTION",
+        "/rest/gsr-report/KZP_MATERIALS/project/{projectId}",
+        "/rest/gsr-report/KZP_POSITIONS_TEMPLATE/project/{projectId}",
+        "/rest/gsr-report/KZP_RGT/project/{projectId}",
+        "/rest/gsr-report/LINES_FOR_VERIFICATION/project/{projectId}",
+        "/rest/gsr-report/MATERIAL_DIFFERENTIAL/project/{projectId}/calculation/{calculationId}/position/{calculationPositionId}/tubing-position/{tubingPositionId}",
+        "/rest/gsr-report/MATERIAL_DIFFERENTIAL/project/{projectId}/kzp/position/{kzpPositionId}/tubing-position/{tubingPositionId}",
+        "/rest/gsr-report/OFFER_COMPARISON/project/{projectId}",
+        "/rest/gsr-report/OFFER_PERFORMANCE/project/{projectId}/calculation/{calculationId}",
+        "/rest/gsr-report/OFFER_PROGRESS",
+        "/rest/gsr-report/POSITION_BALANCE/project/{projectId}",
+        "/rest/gsr-report/RESOURCES_ON_APPROVED_POSITIONS_BY_TECHNOLOGISTS",
+        "/rest/gsr-report/RESOURCES_ON_APPROVED_POSITIONS_BY_TECHNOLOGISTS_IN_KZP",
+        "/rest/gsr-report/STARTING_SPECIFICATION_OF_ACCEPTED_OFFER",
+        "/rest/gsr-report/TECHNOLOGISTS_WORK_IN_KZP",
+        "/rest/gsr-report/TECHNOLOGISTS_WORK_ON_OFFERS",
+        "/rest/gsr-report/UNPRICED_WORK",
+        "/rest/gsr-report/VERIFICATION_POSITION/project/{projectId}/calculation/{calculationId}",
+        "/rest/gsr-report/VERIFICATION/project/{projectId}/calculation/{calculationId}",
+        "/rest/gsr-report/WORK_DESCRIPTION_PRINT/project/{projectId}",
+        "/rest/gsr-report/WORK_PROGRESS"
+      ]
+    },
+    "favourite-project-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "delete"
+      ],
+      "paths": [
+        "/rest/favourite-project/{projectId}",
+        "/rest/favourite-project/{projectId}"
+      ]
+    },
+    "external-access-pricing-module-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/pricing/{id}/token-status",
+        "/rest/external/pricing/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/external/pricing/project/{projectId}/kzp/position/{positionId}/line/{lineId}",
+        "/rest/external/pricing/project/{projectId}/verification/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "additional-objects-module-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/external/additional-objects/{id}/token-status",
+        "/rest/external/additional-objects/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/external/additional-objects/project/{projectId}/kzp/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "additional-objects-module-copy-line-callback-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/external/additional-objects/copy-lines/callback/id/{idOfCopyLineOperation}",
+        "/rest/external/additional-objects/copy-lines/callback/import/{importId}/status"
+      ]
+    },
+    "external-module-line-set-detacher-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/detach-external-module-lines/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}",
+        "/rest/detach-external-module-lines/project/{projectId}/kzp/position/{positionId}/line/{lineId}"
+      ]
+    },
+    "acceptance-protocol-approval-user-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "delete",
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/project/{projectId}/acceptance-protocol-approval-users/{userId}",
+        "/rest/cooperation/project/{projectId}/acceptance-protocol-approval-users/{userId}/add",
+        "/rest/cooperation/project/{projectId}/acceptance-protocol-approval-users/list"
+      ]
+    },
+    "task-tracker-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/project/task-tracker/{userId}/coop-agreement/from-lines/search",
+        "/rest/cooperation/project/task-tracker/{userId}/lines/search",
+        "/rest/cooperation/project/task-tracker/{userId}/offer-request/search"
+      ]
+    },
+    "coop-work-screen-projects-summary-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/project/summary/search"
+      ]
+    },
+    "coop-offer-line-item-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer/{offerId}/line/search"
+      ]
+    },
+    "coop-offer-request-questions-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{offerRequestId}/questions/answer",
+        "/rest/cooperation/offer-request/{offerRequestId}/questions/list"
+      ]
+    },
+    "coop-offer-request-comment-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{offerRequestId}/comment",
+        "/rest/cooperation/offer-request/{offerRequestId}/comment/search"
+      ]
+    },
+    "coop-offer-request-lines-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "delete"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{id}/line",
+        "/rest/cooperation/offer-request/{id}/line"
+      ]
+    },
+    "coop-awk-offer-unsent-receiver-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{id}/awk/unsent-receivers"
+      ]
+    },
+    "coop-awk-offer-receiver-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{id}/awk/current-not-accepted-receivers",
+        "/rest/cooperation/offer-request/{id}/awk/outdated-receivers"
+      ]
+    },
+    "coop-awk-offer-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{id}/awk/accepted-offers",
+        "/rest/cooperation/offer-request/{id}/awk/previous"
+      ]
+    },
+    "coop-offer-request-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/changelog/{offerRequestId}/details/{revisionId}",
+        "/rest/cooperation/offer-request/changelog/{offerRequestId}/search"
+      ]
+    },
+    "coop-kzp-position-search-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/kzp-position/search"
+      ]
+    },
+    "coop-kzp-line-search-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/kzp-line/search"
+      ]
+    },
+    "coop-awk-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/awk"
+      ]
+    },
+    "coop-agreement-kzp-line-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/kzp-line/cost",
+        "/rest/cooperation/agreement/{agreementId}/kzp-line/search"
+      ]
+    },
+    "coop-agreement-annex-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/annex",
+        "/rest/cooperation/agreement/{agreementId}/annex/probably-business-id"
+      ]
+    },
+    "acceptance-protocol-user-approval-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/acceptance-protocol/{protocolId}/final/approval",
+        "/rest/cooperation/acceptance-protocol/{protocolId}/final/approve",
+        "/rest/cooperation/acceptance-protocol/{protocolId}/final/reject"
+      ]
+    },
+    "acceptance-protocol-with-agreement-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperation/acceptance-protocol/with-agreement/search"
+      ]
+    },
+    "cooperant-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperant/changelog/{cooperantId}/details/{revisionId}",
+        "/rest/cooperant/changelog/{cooperantId}/search"
+      ]
+    },
+    "cooperant-bulk-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/cooperant/bulk/activate",
+        "/rest/cooperant/bulk/deactivate"
+      ]
+    },
+    "coop-invoice-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/rest/coop-agreement/{agreementId}/coop-invoices/{id}",
+        "/rest/coop-agreement/{agreementId}/coop-invoices/search"
+      ]
+    },
+    "project-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}",
+        "/rest/changelog/project/{projectId}/change/{trackingId}"
+      ]
+    },
+    "workload-valuation-line-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/workload",
+        "/rest/changelog/project/{projectId}/workload/{workloadId}/change/{trackingId}"
+      ]
+    },
+    "vor-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/vor",
+        "/rest/changelog/project/{projectId}/vor/{vorId}/change/{trackingId}"
+      ]
+    },
+    "structure-group-position-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/structure-group",
+        "/rest/changelog/project/{projectId}/structure-group/{structureId}/change/{trackingId}"
+      ]
+    },
+    "calculation-position-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/position"
+      ]
+    },
+    "project-membership-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/membership"
+      ]
+    },
+    "material-calculation-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/material",
+        "/rest/changelog/project/{projectId}/material/{materialId}/change/{trackingId}"
+      ]
+    },
+    "calculation-line-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/line"
+      ]
+    },
+    "kzp-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp"
+      ]
+    },
+    "workload-valuation-kzp-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/workload",
+        "/rest/changelog/project/{projectId}/kzp/workload/{id}/change/{trackingId}"
+      ]
+    },
+    "kzp-position-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/position"
+      ]
+    },
+    "kzp-line-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/line"
+      ]
+    },
+    "estimated-demand-kzp-line-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/estimated-resources-demand",
+        "/rest/changelog/project/{projectId}/kzp/estimated-resources-demand/{id}/change/{trackingId}"
+      ]
+    },
+    "estimated-demand-line-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/estimated-resources-demand",
+        "/rest/changelog/project/{projectId}/estimated-resources-demand/{estimatedDemandId}/change/{trackingId}"
+      ]
+    },
+    "calculation-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/calculation"
+      ]
+    },
+    "material-kzp-changelog-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/kzp/{projectId}/material",
+        "/rest/changelog/project/kzp/{projectId}/material/{materialId}/change/{trackingId}"
+      ]
+    },
+    "project-budget-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/rest/budget/search"
+      ]
+    },
+    "webcon-attachment-internal-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/internal/webcon/cooperation/agreement/{agreementId}/attachments",
+        "/internal/webcon/project/{projectId}/attachments/search"
+      ]
+    },
+    "mobile-inspection-sync-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/mobile/inspection/sync"
+      ]
+    },
+    "cooperant-agreement-kzp-lines-internal-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/lines/mark-ready-for-reception",
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/lines/search"
+      ]
+    },
+    "cooperant-invoice-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/invoice/search"
+      ]
+    },
+    "cooperant-agreement-annex-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/agreement/{agreementId}/annex"
+      ]
+    },
+    "cooperant-ships-for-realization-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{id}/ships-for-realization/list"
+      ]
+    },
+    "cooperant-ships-and-offers-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{id}/ships-and-offers/list"
+      ]
+    },
+    "cooperant-agreements-internal-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{id}/agreement/{agreementId}",
+        "/internal/cooperant/person/{id}/agreement/{agreementId}/preview",
+        "/internal/cooperant/person/{id}/agreement/search"
+      ]
+    },
+    "cooperant-person-internal-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/reset-password",
+        "/internal/cooperant/person/byLoginAD"
+      ]
+    },
+    "cooperant-offer-request-questions-internal-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "post",
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/offer-requests/{offerRequestId}/questions",
+        "/internal/cooperant/person/{cooperantPersonId}/offer-requests/{offerRequestId}/questions/list"
+      ]
+    },
+    "cooperant-offer-requests-internal-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/offer-requests/{offerRequestId}",
+        "/internal/cooperant/person/{cooperantPersonId}/offer-requests/search"
+      ]
+    },
+    "cooperant-agreement-offer-requests-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/agreement/{agreementId}/offer-requests/search"
+      ]
+    },
+    "cooperant-acceptance-protocols-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "post"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/acceptance-protocols/with-agreement/search"
+      ]
+    },
+    "report-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/report/{reportId}"
+      ]
+    },
+    "project-authorities-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/my-authorities"
+      ]
+    },
+    "kzp-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get",
+        "delete"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp",
+        "/rest/project/{projectId}/kzp"
+      ]
+    },
+    "workload-valuation-kzp-position-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/workload/sum"
+      ]
+    },
+    "kzp-line-sum-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/sum/material",
+        "/rest/project/{projectId}/kzp/position/{positionId}/line/{lineId}/sum/workload-valuation"
+      ]
+    },
+    "workload-valuation-position-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/workload/sum"
+      ]
+    },
+    "calculation-line-sum-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/sum/material",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/sum/material-per-currency",
+        "/rest/project/{projectId}/calculation/{calculationId}/position/{positionId}/line/{lineId}/sum/workload-valuation"
+      ]
+    },
+    "budget-transitional-table-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/transitional-table-data",
+        "/rest/project/{projectId}/budget/{budgetId}/transitional-table-history"
+      ]
+    },
+    "budget-table-structure-controller": {
+      "endpointCount": 2,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/{budgetId}/table",
+        "/rest/project/{projectId}/budget/snapshot/{snapshotBudgetId}/table"
+      ]
+    },
+    "budget-currency-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/project/{projectId}/budget/currency"
+      ]
+    },
+    "permission-checker-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/permission-check/{permissionString}"
+      ]
+    },
+    "import-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/import/{importId}"
+      ]
+    },
+    "error-messages-controller": {
+      "endpointCount": 3,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/error-messages",
+        "/rest/error-messages/common",
+        "/rest/error-messages/warnings"
+      ]
+    },
+    "additional-objects-module-copy-line-url-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/copy-lines-for-additional-objects/import/{importId}"
+      ]
+    },
+    "coop-offer-request-receiver-with-offer-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/offer-request/{offerRequestId}/receiver-with-offer"
+      ]
+    },
+    "coop-agreement-cost-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{id}/cost"
+      ]
+    },
+    "acceptance-protocol-kzp-line-summary-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/amount-calculated",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/cooperant-decision-cost",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/final-cost",
+        "/rest/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/proposed-fixed-cost"
+      ]
+    },
+    "calculation-position-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/position/{positionId}/change/{trackingId}"
+      ]
+    },
+    "calculation-line-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/line/{lineId}/change/{trackingId}"
+      ]
+    },
+    "kzp-position-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/position/{positionId}/change/{trackingId}"
+      ]
+    },
+    "kzp-position-sale-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/position/sale/{positionSaleId}/change/{trackingId}"
+      ]
+    },
+    "kzp-line-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/line/{lineId}/change/{trackingId}"
+      ]
+    },
+    "kzp-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/kzp/change/{trackingId}"
+      ]
+    },
+    "calculation-position-sale-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/project/{projectId}/calculation/position/sale/{positionSaleId}/change/{trackingId}"
+      ]
+    },
+    "project-membership-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/membership/{membershipId}/change/{trackingId}"
+      ]
+    },
+    "calculation-changelog-details-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/changelog/calculation/{calculationId}/change/{trackingId}"
+      ]
+    },
+    "board-resolution-changelog-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/rest/board-resolution-changelog/{boardResolutionId}"
+      ]
+    },
+    "mobile-inspection-positions-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/mobile/inspection/user/{userId}/project/{projectId}/position/list"
+      ]
+    },
+    "mobile-inspection-projects-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/mobile/inspection/user/{userId}/project/list"
+      ]
+    },
+    "acceptance-protocol-kzp-line-summary-internal-controller": {
+      "endpointCount": 4,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/amount-calculated",
+        "/internal/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/cooperant-decision-cost",
+        "/internal/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/final-cost",
+        "/internal/cooperation/agreement/{agreementId}/acceptance-protocol/{protocolId}/kzp-line/summary/proposed-fixed-cost"
+      ]
+    },
+    "cooperant-industry-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{personId}/industry/list"
+      ]
+    },
+    "cooperant-projects-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/projects/{projectId}"
+      ]
+    },
+    "cooperant-people-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/people"
+      ]
+    },
+    "cooperant-offer-request-position-materials-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperant/person/{cooperantPersonId}/offer-request/{offerRequestId}/position/{positionId}/materials"
+      ]
+    },
+    "cooperant-position-internal-controller": {
+      "endpointCount": 1,
+      "methods": [
+        "get"
+      ],
+      "paths": [
+        "/internal/cooperant-position/list"
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "controller": "coop-work-screen-projects-summary-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/cooperation/project/summary/search",
+      "method": "post",
+      "summary": "Searches for project summary for coop work screen",
+      "operationId": "search_41",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "controller": "project-energy-factor-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/project/for-energy-factor/search",
+      "method": "post",
+      "summary": "Searches for energy factor of project",
+      "operationId": "search_31",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

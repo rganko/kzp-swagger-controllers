@@ -1,0 +1,12 @@
+[
+  "vor-changelog-controller",
+  "vor-controller",
+  "webcon-attachment-internal-controller",
+  "webcon-context-controller",
+  "webcon-update-redis-entry-controller",
+  "workload-valuation-calculation-line-controller",
+  "workload-valuation-kzp-changelog-controller",
+  "workload-valuation-kzp-line-controller",
+  "workload-valuation-kzp-position-controller",
+  "workload-valuation-line-changelog-controller"
+]

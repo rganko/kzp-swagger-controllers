@@ -1,0 +1,12 @@
+[
+  "kzp-line-controller",
+  "kzp-line-cooperation-controller",
+  "kzp-line-edit-controller",
+  "kzp-line-for-material-copy-controller",
+  "kzp-line-froze-execution-controller",
+  "kzp-line-material-approval-controller",
+  "kzp-line-package-controller",
+  "kzp-line-package-search-controller",
+  "kzp-line-reception-comment-controller",
+  "kzp-line-sum-controller"
+]

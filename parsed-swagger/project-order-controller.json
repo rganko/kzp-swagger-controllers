@@ -1,0 +1,42 @@
+{
+  "controller": "project-order-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/project/order/status",
+      "method": "post",
+      "summary": "Get order status for given project ids",
+      "operationId": "getProjectOrdersStatus",
+      "parameters": [
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": [
+          "application/json"
+        ]
+      },
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

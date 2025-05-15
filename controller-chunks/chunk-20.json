@@ -1,0 +1,12 @@
+[
+  "report-technologist-load-xls-controller",
+  "report-tubing-module-copy-xls-controller",
+  "search-engine-controller",
+  "send-to-production-controller",
+  "structure-group-position-changelog-controller",
+  "structure-group-position-controller",
+  "structure-param-controller",
+  "task-tracker-controller",
+  "task-tracker-data-controller",
+  "task-tracker-project-comment-controller"
+]

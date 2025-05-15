@@ -1,0 +1,12 @@
+[
+  "gsr-report-controller",
+  "hull-resource-executor-controller",
+  "import-controller",
+  "import-copy-merge-positions-controller",
+  "import-copy-positions-controller",
+  "import-copy-positions-renumbering-controller",
+  "import-final-sale-value-controller",
+  "import-kzp-position-translations-controller",
+  "import-positions-with-lines-controller",
+  "import-sale-cost-controller"
+]

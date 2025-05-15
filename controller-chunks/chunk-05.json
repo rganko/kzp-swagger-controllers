@@ -1,0 +1,12 @@
+[
+  "calculation-line-valuation-controller",
+  "calculation-position-changelog-controller",
+  "calculation-position-changelog-details-controller",
+  "calculation-position-comment-controller",
+  "calculation-position-controller",
+  "calculation-position-edit-controller",
+  "calculation-position-import-controller",
+  "calculation-position-sale-changelog-details-controller",
+  "calculation-position-sale-comment-controller",
+  "calculation-position-sale-controller"
+]

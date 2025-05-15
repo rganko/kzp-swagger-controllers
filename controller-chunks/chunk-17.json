@@ -1,0 +1,12 @@
+[
+  "kzp-position-to-structure-controller",
+  "kzp-reception-controller",
+  "material-calculation-changelog-controller",
+  "material-calculation-line-controller",
+  "material-calculation-position-controller",
+  "material-kzp-changelog-controller",
+  "material-kzp-line-controller",
+  "material-kzp-position-controller",
+  "material-verification-line-controller",
+  "mobile-inspection-positions-internal-controller"
+]

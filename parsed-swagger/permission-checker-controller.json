@@ -1,0 +1,43 @@
+{
+  "controller": "permission-checker-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/permission-check/{permissionString}",
+      "method": "get",
+      "summary": "Check user's permission",
+      "operationId": "check",
+      "parameters": [
+        {
+          "name": "permissionString",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

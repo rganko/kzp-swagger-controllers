@@ -1,0 +1,69 @@
+{
+  "controller": "kzp-position-sale-changelog-details-controller",
+  "endpointCount": 1,
+  "endpoints": [
+    {
+      "path": "/rest/changelog/project/{projectId}/kzp/position/sale/{positionSaleId}/change/{trackingId}",
+      "method": "get",
+      "summary": "KZP position sale changelog details",
+      "operationId": "getDetails_11",
+      "parameters": [
+        {
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "positionSaleId",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "trackingId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "AuthUser",
+          "in": "header",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "responses": [
+        {
+          "code": "200",
+          "description": "OK",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "401",
+          "description": "Unauthorized",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "403",
+          "description": "No permission",
+          "contentTypes": [
+            "application/json"
+          ]
+        },
+        {
+          "code": "404",
+          "description": "Not found",
+          "contentTypes": [
+            "application/json"
+          ]
+        }
+      ]
+    }
+  ]
+}

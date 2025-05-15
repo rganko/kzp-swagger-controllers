@@ -1,0 +1,12 @@
+[
+  "mobile-inspection-projects-internal-controller",
+  "mobile-inspection-sync-internal-controller",
+  "permission-checker-controller",
+  "power-of-attorney-user-project-controller",
+  "production-project-controller",
+  "project-authorities-controller",
+  "project-budget-controller",
+  "project-card-controller",
+  "project-card-extra-access-user-controller",
+  "project-changelog-controller"
+]

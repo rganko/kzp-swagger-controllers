@@ -1,0 +1,12 @@
+[
+  "tk-change-card-approver-controller",
+  "tk-drawing-controller",
+  "tk-material-controller",
+  "tubing-module-calculation-callback-controller",
+  "tubing-module-controller",
+  "tubing-module-kzp-callback-controller",
+  "verification-kzp-line-thread-controller",
+  "verification-line-controller",
+  "verification-position-comment-controller",
+  "verification-position-controller"
+]
